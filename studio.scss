@@ -1,0 +1,570 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: Helvetica;
+}
+
+html {
+  color: rgb(235, 237, 240);
+  font-size: clamp(14px, 1vw, 18px);
+}
+
+body {
+  background-color: #111;
+}
+
+@mixin flex-column($gap: 0) {
+  display: flex;
+  flex-direction: column;
+  gap: $gap;
+}
+
+/* View 1 */
+section.viwe1 {
+  max-width: 2800px;
+
+  .text {
+    h1 {
+      font-size: 6rem;
+    }
+  }
+}
+
+main {
+  width: 100%;
+  @include flex-column(0);
+  align-items: center;
+
+  section.viwe1 {
+    width: 100%;
+    @include flex-column(1rem);
+    padding: 1rem;
+
+    .top img {
+      width: 100%;
+      border-radius: 1rem;
+    }
+
+    .bottom {
+      background-color: #292929;
+      padding: 1.8rem;
+      @include flex-column(3.5rem);
+      border-radius: 1rem;
+      
+
+      .text {
+        @include flex-column(0.7rem);
+
+        h1 {
+          font-size: 2.33rem;
+          font-weight: 100;
+          text-transform: uppercase;
+        }
+
+        p {
+          font-size: 1.2rem;
+          font-weight: 100;
+          opacity: 0.6;
+          line-height: 1.7rem;
+        }
+
+        button {
+          width: fit-content;
+          border: none;
+          outline: none;
+          padding: 0.7rem 1rem;
+          border-radius: 0.6rem;
+          background-color: #333;
+          color: aliceblue;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+
+          &:hover {
+            background-color: #444;
+          }
+        }
+      }
+    }
+  }
+
+  section.viwe4 {
+    width: 100%;
+    @include flex-column(1rem);
+    padding: 1rem;
+
+    .top img {
+      width: 100%;
+      border-radius: 0.9rem;
+    }
+
+    .bottom {
+      background-color: #292929;
+      padding: 1.8rem;
+      @include flex-column(3.5rem);
+      border-radius: 1rem;
+      
+
+      .text {
+        @include flex-column(0.7rem);
+
+        h1 {
+          font-size: 2.33rem;
+          font-weight: 100;
+          text-transform: uppercase;
+        }
+
+        p {
+          font-size: 1.2rem;
+          font-weight: 100;
+          opacity: 0.6;
+          line-height: 1.7rem;
+        }
+
+        button {
+          width: fit-content;
+          border: none;
+          outline: none;
+          padding: 0.7rem 1rem;
+          border-radius: 0.6rem;
+          background-color: #333;
+          color: aliceblue;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+
+          &:hover {
+            background-color: #444;
+          }
+        }
+      }
+    }
+  }
+
+  section.viwe5{
+     display: flex;
+     width: 100%;
+     justify-content: space-between;
+     padding: 1rem;
+     .top{
+
+      h1{
+        font-weight: 300;
+      }
+     }
+     .bottom{
+      
+       button{
+        display: flex;
+        gap: 0.5rem;
+        padding: 1rem;
+        background-color:transparent;
+        color: #fff;
+        border: none;
+        border-radius: 1rem;
+        font-size: 1rem;
+        font-weight: 300;
+       
+        
+       }
+     }
+  }
+
+  section.viwe6 {
+    @include flex-column(2rem);
+    width: 100%;
+    padding: 1rem;
+    
+  
+
+   .card1 {
+    border-radius: 1rem;
+
+     width: 100%;
+     background-image: url("https://assets-global.website-files.com/63cffb7c16ab3347fc9734c8/63d2ccbd7d003dfb6a1bdecb_team-01.webp");
+     aspect-ratio: 1/1;
+     background-size: cover;
+
+     @include flex-column(0rem);
+     justify-content: space-between;
+     padding: 1rem;
+
+     .icon,.bottom{
+      background-color: rgba(48, 43, 43, 0.375);
+      backdrop-filter: blur(10px);
+      border: 1px solid white;
+      border-radius: 0.33rem;
+      padding:0.5rem ;
+     }
+
+     .top{
+      display: flex;
+      gap: 1rem;
+      justify-content: flex-end;
+     }
+
+     icon{
+      width: fit-content;
+      border-radius: 50%;
+     }
+
+     .bottom{
+      display: flex;
+      justify-content: space-between;
+      padding:1.5rem  1rem;
+
+      p{
+        text-transform : uppercase;
+        padding: 0.2rem;
+        font-size: 1.3rem;
+        font-weight: 300
+      }
+     }
+  }
+   .card2 {
+    border-radius: 1rem;
+
+     width: 100%;
+     background-image: url("https://assets-global.website-files.com/63cffb7c16ab3347fc9734c8/63d2ccbd2e12fa747e999689_team-02.webp");
+     aspect-ratio: 1/1;
+     background-size: cover;
+
+     @include flex-column(0rem);
+     justify-content: space-between;
+     padding: 1rem;
+
+     .icon,.bottom{
+      background-color: rgba(48, 43, 43, 0.375);
+      backdrop-filter: blur(10px);
+      border: 1px solid white;
+      border-radius: 0.33rem;
+      padding:0.5rem ;
+     }
+
+     .top{
+      display: flex;
+      gap: 1rem;
+      justify-content: flex-end;
+     }
+
+     icon{
+      width: fit-content;
+      border-radius: 50%;
+     }
+
+     .bottom{
+      display: flex;
+      justify-content: space-between;
+      padding:1.5rem  1rem;
+
+      p{
+        text-transform : uppercase;
+        padding: 0.2rem;
+        font-size: 1.3rem;
+        font-weight: 300
+      }
+     }
+  }
+   .card3 {
+    border-radius: 1rem;
+
+     width: 100%;
+     background-image: url("https://assets-global.website-files.com/63cffb7c16ab3347fc9734c8/63d2ccbdc1f945f817bf4fd7_team-03.webp");
+     aspect-ratio: 1/1;
+     background-size: cover;
+
+     @include flex-column(0rem);
+     justify-content: space-between;
+     padding: 1rem;
+
+     .icon,.bottom{
+      background-color: rgba(48, 43, 43, 0.375);
+      backdrop-filter: blur(10px);
+      border: 1px solid white;
+      border-radius: 0.33rem;
+      padding:0.5rem ;
+     }
+
+     .top{
+      display: flex;
+      gap: 1rem;
+      justify-content: flex-end;
+     }
+
+     icon{
+      width: fit-content;
+      border-radius: 50%;
+     }
+
+     .bottom{
+      display: flex;
+      justify-content: space-between;
+      padding:1.5rem  1rem;
+
+      p{
+        text-transform : uppercase;
+        padding: 0.2rem;
+        font-size: 1.3rem;
+        font-weight: 300
+      }
+     }
+  }
+}
+  
+section.viwe7{
+  width: 100%;
+  @include flex-column(1rem);
+  padding: 1rem;
+
+  .top{
+    img{
+      width: 100%;
+      border-radius: 1rem;
+    }
+  }
+
+  .bottom{
+    background-color: #292929;
+    padding: 1.8rem;
+     @include flex-column(3.5rem);
+    border-radius: 1rem;
+    .text{
+      @include flex-column(2rem);
+
+      h1{
+         font-size: 2.33rem;
+         font-weight: 100;
+          text-transform: uppercase;
+      }
+      p{
+        font-size: 1.2rem;
+          font-weight: 100;
+          opacity: 0.6;
+          line-height: 1.7rem;
+      }
+    }
+
+    button{
+      display: flex;
+      gap: 1rem;
+      width: fit-content;
+      padding: 1rem;
+      color: #fff;
+      background-color: transparent;
+      border: none;
+    }
+  }
+}
+}
+
+/* View 2 */
+section.viwe2 {
+  @include flex-column(1rem);
+  width: 100%;
+  padding: 1rem;
+
+  .top,
+  .bottom {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+
+    .element {
+      text-align: center;
+      @include flex-column(0.6rem);
+    
+
+
+      small {
+        opacity: 0.6;
+      }
+
+      h2 {
+        font-size: 3rem;
+        font-weight: 300;
+      }
+    }
+  }
+}
+
+/* View 3 */
+section.viwe3 {
+  width: 100%;
+  padding: 1rem;
+  @include flex-column(1rem);
+
+  .top img {
+    width: 100%;
+    border-radius: 1rem;
+  }
+
+  .bottom {
+    background-color: #292929;
+    padding: 1.8rem;
+    @include flex-column(3.5rem);
+    border-radius: 1rem;
+    
+
+    .text {
+      @include flex-column(0.7rem);
+
+      h1{
+       font-size: 2.33rem;
+       font-weight: 100;
+      }
+    }
+
+    .para {
+      font-size: 1.2rem;
+          font-weight: 100;
+          opacity: 0.6;
+          line-height: 1.7rem;
+    }
+  }
+
+  .bottom>p{
+    text-transform: uppercase;
+  }
+
+
+
+}
+
+/* Responsive */
+@media (min-width: 900px) {
+  main {
+    section.viwe1 {
+      flex-direction: row;
+      padding: 1rem 3rem;
+
+      .top,
+      .bottom {
+        width: 50%;
+      }
+
+      .bottom {
+        justify-content: space-between;
+        padding: 2rem;
+
+        .text {
+          gap: 1rem;
+
+          h1 {
+            font-size: 2.5rem;
+          }
+
+          p {
+            width: 60%;
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+
+   section.viwe2 {
+    flex-direction: row;
+     padding: 1rem 4rem;
+    
+   }
+
+    section.viwe3 {
+      flex-direction: row-reverse;
+
+      .top,
+      .bottom {
+        width: 50%;
+      }
+
+      .bottom {
+        justify-content: space-between;
+        padding: 3rem;
+
+        .para {
+          display: flex;
+          gap: 2rem;
+
+          p {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+     section.viwe4 {
+      flex-direction: row;
+
+      .top,
+      .bottom {
+        width: 50%;
+      }
+
+      .bottom {
+        justify-content: space-between;
+        padding: 3rem;
+
+        .para {
+          display: flex;
+          gap: 2rem;
+
+          p {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+ 
+    section.viwe5{
+      display: flex;
+      justify-content: space-between;
+      padding: 3rem 1rem ;
+
+      .bottom{
+        button{
+          font-size: 1rem;
+        }
+      }
+    }
+
+   section.viwe6{
+      flex-direction: row;
+      padding: 1rem 4rem;
+
+      .card{
+        width: 30%;
+        aspect-ratio: 1/1.2;
+      }
+    }
+  
+   section.viwe7{
+    flex-direction: row;
+    padding: 1rem 3rem;
+
+    .top,.bottom{
+      width: 50%;
+    }
+
+    .top{
+     @include flex-column(1rem);
+
+     .text{
+      gap:1rem;
+     }
+     
+    }
+    .bottom{
+      justify-content: space-between;
+      padding: 2rem;
+
+      p{
+        font-size: 1rem;
+      }
+    }
+   }
+
+  }
+ 
+}

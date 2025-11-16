@@ -1,0 +1,80 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: Helvetica;
+  background-color: #111;
+  color: #fff;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+}
+main section.viwe1 {
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+main section.viwe1 h1 {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+main section.viwe2 {
+  width: 100%;
+  padding: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+main section.viwe2 .info-img {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+main section.viwe2 .info-img .top {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+main section.viwe2 .info-img .top img {
+  width: 100%;
+  border-radius: 1rem;
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+}
+main section.viwe2 .info-img .top .bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  border-radius: 0 0 1rem 1rem;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: all 0.4s ease-in-out;
+}
+main section.viwe2 .info-img .top:hover img {
+  transform: scale(1.05);
+  filter: brightness(0.8);
+}
+main section.viwe2 .info-img .top:hover .bottom {
+  opacity: 1;
+  transform: translateY(0);
+}/*# sourceMappingURL=india.css.map */

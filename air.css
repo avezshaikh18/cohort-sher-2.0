@@ -1,0 +1,120 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+main{
+    height:100% ;
+    width: 100%;
+    background-color: rgb(199, 195, 195);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.center{
+    height: 90%;
+    width: 90%;
+    border-radius: 50px;
+    background-color: white;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+}
+.info{
+    height: 80%;
+    width: 80%;
+    position: fixed;
+
+    background-image: url("https://images.unsplash.com/photo-1569839333583-7375336cde4b?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1930");
+    background-size: cover;
+    border-radius: 50px;
+    margin-left: 10%;
+    margin-top: 2%;
+   
+}
+
+.nav{
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo{
+    height: 100%;
+    width: 25%;
+    padding: 30px;
+}
+.logo h1{
+    font-size: 30px;
+    margin-left: 70px;
+}
+
+.nav-info{
+    height: 100%;
+    width: 45%;
+    padding: 35px;
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.nav-info a{
+    text-decoration: none;
+    margin-left: 18px;
+    color: black;
+}
+
+.sign{
+    height: 100%;
+    width: 30%;
+    padding: 20px;
+}
+.sign button{
+    padding: 18px 45px;
+    border-radius: 50px;
+    border: none;
+    background-color: #222;
+    color: aliceblue;
+    font-size: 18px;
+    font-weight: 800;
+    margin-left: 150px;
+}
+
+
+section{
+    height: 10%;
+    width: 20%;
+    margin-top: 350px;
+    margin-left: 300px;
+    top: 10%;
+    bottom: 0;
+   
+   
+}
+
+
+section h1{
+    font-size: 65px;
+    font-weight: 800;
+    margin-top: 10px;
+}
+
+section
+ button{
+    padding: 20px 30px;
+    font-size: 20px;
+    font-weight: 800;
+    border-radius: 50px;
+    border: none;
+    background-color: #000;
+    color: #fff;
+    margin-top: 20px;
+
+}

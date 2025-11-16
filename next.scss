@@ -1,0 +1,55 @@
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Helvetica Neue';
+}
+
+main{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+
+  section{
+    height: 90%;
+    flex-grow: 1;
+    background-size: cover;
+    background-position: top;
+    border: 5px solid white ;
+  }
+
+  section:hover{
+    flex-grow: 2;
+    transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+    cursor: pointer;
+  }
+
+  section:nth-child(1){
+    background-image:url("https://i.pinimg.com/1200x/d1/56/20/d15620c2b7b8247d9d00e383bb0cc0bc.jpg") ;
+  }
+
+   section:nth-child(2){
+    background-image:url("https://i.pinimg.com/736x/65/29/e6/6529e63fac402f8a0f5dcf0561ace85e.jpg") ;
+  }
+
+   section:nth-child(3){
+    background-image:url("https://i.pinimg.com/736x/2d/57/78/2d57780c1eefeccad0ee597b3d96d720.jpg") ;
+  }
+
+   section:nth-child(4){
+    background-image:url("https://i.pinimg.com/736x/13/43/6c/13436cf8c7f97d525654c024997860dd.jpg") ;
+  }
+  
+   section:nth-child(5){
+    background-image:url("https://i.pinimg.com/736x/ed/1a/83/ed1a834abd8fd1e106390e793a9aaa2d.jpg") ;
+  }
+}

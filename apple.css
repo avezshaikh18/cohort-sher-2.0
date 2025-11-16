@@ -1,0 +1,206 @@
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+    font-family:  Helvetica, sans-serif;
+  
+}
+
+.main{
+    height: 100%;
+    width: 100%;
+    background-color: #222;
+    color: #fff;
+    font-family: Helvetica;
+    background-color: #fff;
+}
+.navbar{
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    gap: 25px;
+    position: fixed;
+    background-color:white;
+}
+.navbar a{
+    text-decoration: none;
+    color: #222;
+    font-size: 20px;
+}
+.center{
+    height: 65%;
+    width: 100%;
+    background-image: url("./iphone.jpg");
+    background-size: auto;
+    background-position:center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.center h1{
+    font-size: 60px;
+    font-weight: 700;
+}
+.mid{
+    margin-top: -280px;
+}
+.mid h3{
+    font-size: 30px;
+    font-weight: 400;
+    
+    margin-left: 120px;
+    
+}
+
+button{
+    padding: 18px 30px;
+    margin-top: 25px;
+    margin-right: 15px;
+    border-radius: 50px;
+    border: none;
+    font-size: 19px;
+    border: 1.5px solid #0077ed;
+    color: #0077ed;
+    background-color: transparent;
+}
+#but{
+    margin-left: 60px;
+    background-color: #0077ed;
+    color: #fff;
+    font-weight: 600;
+}
+.cenbtm{
+    height: 80%;
+    width: 100%;
+    color: #222;
+   background-image: url("./iphone2.jpg");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cenbtm h1{
+    font-size: 60px;
+    font-weight: 700;
+}
+.midbtm{
+    margin-top: -300px;
+}
+.cenbtm h3{
+    font-size: 30px;
+    font-weight: 400;
+    margin-top: 10px;
+}
+
+.but-1{
+    
+    background-color: #0077ed;
+    color: #fff;
+    font-weight: 600;
+}
+
+.botom{
+    height: 90%;
+    width: 100%;
+    color: #222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 150px;
+}
+.bot-1{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("./iphone17.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.bot-info{
+   margin-top: -500px;
+   margin-left: 100px;
+}
+
+.bot-2{
+    height:100% ;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("./airpods.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.but-2{
+    background-color: #0077ed;
+    color: #fff;
+    font-weight: 600;
+}
+.botom h1{
+    font-size: 50px;
+    font-weight: 550;
+}
+
+.botom h3{
+    font-size: 30px;
+    font-weight: 400;
+    margin-top: 10px; 
+}
+.info-2{
+    margin-top: -500px;
+    margin-left: 50px;
+}
+
+.botom-2{
+    height: 90%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+   
+}
+.part1{
+    height: 100%;
+    width: 50%;
+    background-image: url("./watch.jpg");
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.part-info{
+    margin-top: -350px;
+}
+.info-3{
+    margin-top: -350px;
+}
+.part2{
+    height: 100%;
+    width: 50%;
+    background-image: url("./watch2.jpg");
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+footer{
+    height: 60px;
+    width: 100%;
+    background-color: #222;
+}

@@ -1,0 +1,308 @@
+/* ---------- Global Reset ---------- */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+  font-family: Helvetica;
+}
+
+/* ---------- Mixin ---------- */
+/* ---------- Main Container ---------- */
+main {
+  height: 100%;
+  width: 100%;
+  gap: 1rem;
+  /* ---------- Navigation Section ---------- */
+  /* ---------- View 1 ---------- */
+  /* ---------- Middle Section ---------- */
+  /* ---------- View 2 ---------- */
+}
+main section.nav {
+  width: 100%;
+  padding: 1rem;
+  background-color: #f4f0f0;
+  color: #292929;
+  display: flex;
+  justify-content: space-between;
+}
+main section.nav .top h1 {
+  font-size: 2rem;
+  font-weight: 400;
+}
+main section.nav .bottom i {
+  font-size: 2rem;
+}
+main section.viwe1 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+main section.viwe1 .top {
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+}
+main section.viwe1 .top img {
+  width: 100%;
+}
+main section.viwe1 .bottom {
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 1rem;
+  text-align: center;
+}
+main section.viwe1 .bottom h1 {
+  font-size: 2.8rem;
+  width: 70%;
+}
+main section.middle {
+  padding: 2rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 3rem;
+  background: linear-gradient(white, pink);
+}
+main section.middle .text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 80%;
+  text-align: center;
+}
+main section.middle .text h2 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+main section.viwe2 {
+  width: 100%;
+  margin-top: 3rem;
+  padding: 1rem;
+  gap: 2rem;
+  /* ---------- Image One ---------- */
+  /* ---------- Image Two ---------- */
+  /* ---------- Image Three ---------- */
+}
+main section.viwe2 .img-one .top {
+  width: 100%;
+  padding: 1.5rem;
+}
+main section.viwe2 .img-one .top h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 1rem;
+}
+main section.viwe2 .img-one .top p {
+  font-size: 1.8rem;
+  font-weight: 500;
+  opacity: 0.8;
+  padding: 1rem;
+}
+main section.viwe2 .img-one .bottom {
+  width: 100%;
+}
+main section.viwe2 .img-one .bottom img {
+  width: 100%;
+  padding: 1.5rem 2.5rem;
+}
+main section.viwe2 .img-sec .top {
+  width: 100%;
+  padding: 1.5rem;
+}
+main section.viwe2 .img-sec .top h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 1rem;
+}
+main section.viwe2 .img-sec .top p {
+  font-size: 1.8rem;
+  font-weight: 500;
+  opacity: 0.8;
+  padding: 1rem;
+}
+main section.viwe2 .img-sec .bottom {
+  width: 100%;
+}
+main section.viwe2 .img-sec .bottom img {
+  width: 100%;
+  padding: 1.5rem 2.5rem;
+}
+main section.viwe2 .img-trd .top {
+  width: 100%;
+  padding: 1.5rem;
+}
+main section.viwe2 .img-trd .top h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 1rem;
+}
+main section.viwe2 .img-trd .top p {
+  font-size: 1.8rem;
+  font-weight: 500;
+  opacity: 0.8;
+  padding: 1rem;
+}
+main section.viwe2 .img-trd .bottom {
+  width: 100%;
+}
+main section.viwe2 .img-trd .bottom img {
+  width: 100%;
+  padding: 1.5rem 2.5rem;
+}
+main section.viwe3 {
+  width: 100%;
+  padding: 1rem;
+}
+main section.viwe3 .top img {
+  width: 100%;
+}
+main section.viwe3 .bottom {
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+main section.viwe3 .bottom h3 {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+main section.viwe3 .bottom h1 {
+  font-size: 2.8rem;
+}
+main section.viwe3 .bottom p {
+  font-size: 1rem;
+  font-weight: 200;
+  opacity: 0.8;
+}
+main section.viwe3 .bottom .text button {
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 50px;
+  border: 1px solid rgb(30, 131, 239);
+  color: rgb(30, 131, 239);
+}
+main section.viwe3 .bottom .text h5 {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* ---------- Responsive (Desktop) ---------- */
+@media (min-width: 1400px) {
+  main section.nav {
+    padding: 3rem 1rem;
+    width: 100%;
+  }
+  main section.nav .top h1 {
+    font-size: 2rem;
+  }
+  main section.nav .bottom i {
+    font-size: 2rem;
+  }
+  main section.viwe1 {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 2rem;
+  }
+  main section.viwe1 .top,
+  main section.viwe1 .bottom {
+    width: 50%;
+    padding: 3.5rem;
+  }
+  main section.viwe1 .bottom h1 {
+    font-size: 4.8rem;
+    font-weight: 600;
+    text-align: start;
+  }
+  main section.middle {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 2.8rem;
+  }
+  main section.middle h2 {
+    font-size: 3rem;
+    font-weight: 550;
+    width: 70%;
+  }
+  main section.viwe2 {
+    display: flex;
+    flex-direction: row;
+    padding: 5rem;
+    margin-top: 0;
+  }
+  main section.viwe2 .img-one .top p {
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
+  main section.viwe2 .img-sec .top p {
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
+  main section.viwe2 .img-trd .top p {
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
+  main section.viwe3 {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 6rem;
+  }
+  main section.viwe3 .top, main section.viwe3 .bottom {
+    width: 50%;
+  }
+  main section.viwe3 .bottom {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-direction: column;
+    padding: 5rem;
+  }
+  main section.viwe3 .bottom h3 {
+    font-size: 2rem;
+  }
+  main section.viwe3 .bottom h1 {
+    font-size: 4rem;
+  }
+  main section.viwe3 .bottom p {
+    font-size: 1.5rem;
+  }
+  main section.viwe3 .bottom .text {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    gap: 0.5rem;
+  }
+  main section.viwe3 .bottom .text button {
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+  main section.viwe3 .bottom .text h5 {
+    justify-content: center;
+  }
+}/*# sourceMappingURL=flutter.css.map */
