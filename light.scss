@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+main {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    background: #333;
+    color: #fff;
+}
+
+
+.top {
+    width: 200px;
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+
+.top div {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    background: #444;
+    border: 2px solid black;
+}
+
+
+.bottom {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+button {
+    padding: 0.8rem 1.8rem;
+    border: none;
+    border-radius: 1rem;
+    background: cadetblue;
+    color: black;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+
+.btn1:hover { background: red; }
+.btn2:hover { background: yellow; }
+.btn3:hover { background: green; }
+
+button:active {
+    scale: 0.96;
+}
+
+
+@media (max-width: 1600px) {
+    .top {
+        width: 160px;
+        padding: 1rem;
+    }
+
+    .top div {
+        height: 55px;
+        width: 55px;
+    }
+
+    button {
+        padding: 0.7rem 1.4rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 780px) {
+    main {
+        gap: 1.5rem;
+    }
+
+    .top {
+        width: 140px;
+        padding: 0.8rem;
+    }
+
+    .top div {
+        height: 45px;
+        width: 45px;
+    }
+
+    button {
+        padding: 0.6rem 1rem;
+        font-size: 0.85rem;
+    }
+
+    .bottom {
+        justify-content: center;
+    }
+}
+
+
