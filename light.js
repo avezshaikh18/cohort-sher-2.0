@@ -21,5 +21,5 @@ btn2.addEventListener("click", function () {
 btn3.addEventListener("click", function () {
     red.style.backgroundColor = "#333";
     yellow.style.backgroundColor = "#333";
-    green.style.backgroundColor = "green";
+     green.style.backgroundColor = "green";
 });
