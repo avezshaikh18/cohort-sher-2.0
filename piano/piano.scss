@@ -1,0 +1,48 @@
+*{
+  padding: 0;  
+  margin: 0;
+  box-sizing: border-box;
+}
+html,body{
+  height: 100%;
+  width: 100%;
+}
+@mixin flexcenter(){
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main{
+  height: 100%;
+  width: 100%;
+  background-color: #0c1d32;
+  color: white;
+  @include flexcenter();
+  flex-direction: column;
+  gap: 5px;
+  color: #ffffff;
+  p{
+    font-size: 20px;
+  }
+  .piano{
+    height: 30%;
+    width: 50%;
+    @include flexcenter();
+    gap: 5px;
+    color: #0c1d32;
+    border: 5px solid crimson; 
+
+      .key{
+       height: 150px;
+       width: 30px;
+       background-color: white;
+       cursor: pointer;
+        text-align: center;
+       justify-content: end;
+      }
+       .key:active{
+        scale: 0.95; 
+    
+       }
+  }
+}

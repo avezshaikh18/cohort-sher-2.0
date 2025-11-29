@@ -1,0 +1,47 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  background-color: #0c1d32;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+  color: #ffffff;
+}
+main p {
+  font-size: 20px;
+}
+main .piano {
+  height: 30%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  color: #0c1d32;
+  border: 5px solid crimson;
+}
+main .piano .key {
+  height: 150px;
+  width: 30px;
+  background-color: white;
+  cursor: pointer;
+  text-align: center;
+  justify-content: end;
+}
+main .piano .key:active {
+  scale: 0.95;
+}/*# sourceMappingURL=piano.css.map */

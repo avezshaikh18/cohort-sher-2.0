@@ -9,6 +9,7 @@ body, html {
   width: 100%;
   background-color: #333;
   color: #fcfcfc;
+  overflow: hidden;
 }
 
 main {
@@ -17,6 +18,9 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+main h1 {
+  white-space: nowrap;
 }
 main button {
   padding: 1.5rem 3rem;

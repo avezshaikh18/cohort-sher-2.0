@@ -1,0 +1,72 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #111;
+}
+main section {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main section .reelAll {
+  width: 100%;
+  height: 100%;
+  background-color: #555;
+  border-radius: 1.5rem;
+  position: relative;
+}
+main section .reelAll .reel {
+  width: 100%;
+  height: 100%;
+  background-color: #555;
+  border-radius: 1.5rem;
+  position: relative;
+}
+main section .reelAll .reel .bottom {
+  height: 15%;
+  width: 100%;
+  background: linear-gradient(#111, tranparent);
+  position: absolute;
+  bottom: 0;
+  padding: 1rem;
+  color: crimson;
+}
+main section .reelAll .reel .bottom .user {
+  display: flex;
+  gap: 0.5rem;
+}
+main section .reelAll .reel .bottom .user h2 {
+  font-size: 2rem;
+}
+main section .reelAll .reel .bottom .user button {
+  padding: 10px;
+  border-radius: 0.5rem;
+  border: 1px solid black;
+}
+main section .reelAll .reel .bottom p {
+  font-size: 1.5rem;
+}
+main section .reelAll img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 1.5rem;
+}/*# sourceMappingURL=reel.css.map */
