@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #050505;
+}
+
+main {
+  height: 100vh;
+  width: 100%;
+  padding: 1rem;
+  overflow: hidden;
+}
+main section {
+  width: 100%;
+  max-width: 400px;
+  height: 100%;
+  margin: auto;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+main section::-webkit-scrollbar {
+  display: none;
+}
+
+.allreels {
+  width: 100%;
+  height: 100%;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+.allreels::-webkit-scrollbar {
+  display: none;
+}
+.allreels .reel {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  scroll-snap-align: start;
+}
+.allreels .reel video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.allreels .reel .bottom {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 30px 20px;
+  color: white;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+}
+.allreels .reel .bottom .user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+.allreels .reel .bottom .user img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.allreels .reel .bottom .user h4 {
+  font-size: 18px;
+  font-weight: 600;
+}
+.allreels .reel .bottom .user button {
+  padding: 3px 6px;
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.allreels .reel .bottom .user button:active {
+  background: white;
+  color: black;
+  scale: 0.95;
+}
+.allreels .reel .bottom h3 {
+  font-size: 15px;
+  margin-top: 5px;
+}
+.allreels .reel .right {
+  position: absolute;
+  right: 0;
+  top: 40%;
+  width: 50px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.allreels .reel .right .icon {
+  font-size: 26px;
+  cursor: pointer;
+}
+.allreels .reel .right i:active {
+  scale: 0.95;
+}
+.allreels .reel .right h6 {
+  font-size: 14px;
+}
+.allreels .reel .right > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+@media (max-width: 500px) {
+  main section {
+    max-width: 100%;
+  }
+  .reel {
+    height: 100vh;
+  }
+  .right {
+    width: 45px;
+  }
+}
+@media (max-width: 350px) {
+  .bottom h3 {
+    font-size: 14px;
+  }
+  .user h4 {
+    font-size: 16px;
+  }
+}/*# sourceMappingURL=yt.css.map */
