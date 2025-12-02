@@ -1,4 +1,4 @@
-/* ---------- Global Reset ---------- */
+
 * {
   padding: 0;
   margin: 0;
@@ -10,10 +10,10 @@ html {
   height: 100%;
   width: 100%;
   font-family: Helvetica;
-  // font-size: clamp(14px, 1vw, 18px);
+  
 }
 
-/* ---------- Mixin ---------- */
+
 @mixin flex-center {
   display: flex;
   align-items: center;
@@ -21,13 +21,12 @@ html {
   flex-direction: column;
 }
 
-/* ---------- Main Container ---------- */
+
 main {
   height: 100%;
   width: 100%;
   gap: 1rem;
 
-  /* ---------- Navigation Section ---------- */
   section.nav {
     width: 100%;
     padding: 1rem;
@@ -50,7 +49,7 @@ main {
     }
   }
 
-  /* ---------- View 1 ---------- */
+  
   section.viwe1 {
     width: 100%;
     display: flex;
@@ -82,7 +81,7 @@ main {
     }
   }
 
-  /* ---------- Middle Section ---------- */
+ 
   section.middle {
     padding: 2rem;
     width: 100%;
@@ -102,14 +101,14 @@ main {
     }
   }
 
-  /* ---------- View 2 ---------- */
+  
   section.viwe2 {
     width: 100%;
     margin-top: 3rem;
     padding: 1rem;
     gap: 2rem;
 
-    /* ---------- Image One ---------- */
+    
     .img-one {
       .top {
         width: 100%;
@@ -139,7 +138,7 @@ main {
       }
     }
 
-    /* ---------- Image Two ---------- */
+    
     .img-sec {
       .top {
         width: 100%;
@@ -169,7 +168,7 @@ main {
       }
     }
 
-    /* ---------- Image Three ---------- */
+    
     .img-trd {
       .top {
         width: 100%;
@@ -227,16 +226,19 @@ main {
         opacity: 0.8;
       }
      .text{
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
        button{
         width: fit-content;
-        padding: 1rem;
-        font-size: 0.9rem;
+        padding: 0.5rem;
+        font-size: 0.8rem;
         font-weight: 600;
         border-radius: 50px;
         border: 1px solid rgb(30, 131, 239);
         color: rgb(30, 131, 239);
       }
-      h5{
+       h5{
         font-size:0.8rem;
         font-weight: 700;
         text-align: center;
@@ -245,10 +247,50 @@ main {
      }
     }
   }
+  section.viwe4{
+    width: 100%;
+    padding: 1rem;
+
+    .top{
+      width: 100%;
+      padding: 1rem;
+      img{
+        width: 100%;
+      }
+    }
+    .bottom{
+      width: 100%;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+
+      h1 {
+        font-size: 2rem;
+        font-weight: 600;
+        
+      }
+      p {
+        font-size: 1.2rem;
+        font-weight: 500;
+        opacity: 0.8;
+      }
+      button{
+        width: fit-content;
+        width: 60%;
+        padding: 1rem;
+        font-weight: 600;
+        border-radius: 50px;
+        border: 1px solid rgb(30, 131, 239);
+        background-color: rgb(30, 131, 239);
+        color: white;
+      }
+    }
+  }
 }
 
-/* ---------- Responsive (Desktop) ---------- */
-@media (min-width: 1400px) {
+
+@media (min-width: 1600px) {
   main {
     section.nav {
       padding: 3rem 1rem;
@@ -262,7 +304,6 @@ main {
         font-size: 2rem;
       }
     }
-
     section.viwe1 {
       width: 100%;
       display: flex;
@@ -284,7 +325,6 @@ main {
         }
       }
     }
-
     section.middle {
       width: 100%;
       display: flex;
@@ -298,7 +338,6 @@ main {
         width: 70%;
       }
     }
-
     section.viwe2 {
       display: flex;
       flex-direction: row;
@@ -370,6 +409,31 @@ main {
             justify-content: center;
           }
          }
+      }
+    }
+    section.viwe4{
+      display: flex;
+      flex-direction: row;
+      padding: 6rem;
+
+      .top,.bottom{
+        width: 50%;
+      }
+      .bottom{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        padding: 5rem;
+
+        h1 {
+          font-size: 3rem;
+        }
+        p {
+          font-size: 1.5rem;
+        }
+        button{
+          font-size: 1.5rem;
+        }
       }
     }
   }

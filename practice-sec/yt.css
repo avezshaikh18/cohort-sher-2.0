@@ -4,7 +4,8 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   width: 100%;
   height: 100%;
   font-family: Arial, Helvetica, sans-serif;
@@ -19,7 +20,7 @@ main {
 }
 main section {
   width: 100%;
-  max-width: 400px;
+  max-width: 50vh;
   height: 100%;
   margin: auto;
   overflow-y: auto;
@@ -56,6 +57,8 @@ main section::-webkit-scrollbar {
   position: absolute;
   bottom: 0;
   width: 100%;
+  /* responsive min-height: scales with viewport but bounded between 140px and 300px */
+  min-height: clamp(140px, 20vh, 300px);
   padding: 30px 20px;
   color: white;
   background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
@@ -96,9 +99,10 @@ main section::-webkit-scrollbar {
 }
 .allreels .reel .right {
   position: absolute;
-  right: 0;
-  top: 40%;
-  width: 50px;
+  right: 0%;
+  top: 50%;
+  /* responsive width for the icon column */
+  width: clamp(48px, 7vw, 80px);
   color: white;
   display: flex;
   flex-direction: column;
@@ -106,7 +110,7 @@ main section::-webkit-scrollbar {
   gap: 20px;
 }
 .allreels .reel .right .icon {
-  font-size: 26px;
+  font-size: clamp(1.25rem, 2.5vw, 3rem);
   cursor: pointer;
 }
 .allreels .reel .right i:active {
@@ -122,15 +126,42 @@ main section::-webkit-scrollbar {
   gap: 5px;
 }
 
-@media (max-width: 500px) {
-  main section {
-    max-width: 100%;
+@media (min-width: 900px) {
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-  .reel {
-    height: 100vh;
+  main .allreels .reel .bottom {
+    min-height: clamp(350px, 40vh, 450px);
+    padding: 1rem 2rem;
   }
-  .right {
-    width: 45px;
+  main .allreels .reel .bottom .user img {
+    height: 80px;
+    width: 80px;
+  }
+  main .allreels .reel .bottom .user h4 {
+    font-size: 4rem !important;
+  }
+  main .allreels .reel .bottom .user button {
+    padding: 1rem 2rem;
+    font-size: 1.8rem !important;
+    border-radius: 1rem;
+    margin-left: 0.5rem;
+  }
+  main .allreels .reel .bottom div h3 {
+    font-size: 2.5rem !important;
+  }
+  main .allreels .reel .right {
+    width: clamp(90px, 12vw, 130px) !important;
+    gap: 3.5rem;
+    top: 55%;
+  }
+  main .allreels .reel .right .icon {
+    font-size: clamp(3rem, 8vw, 5.5rem);
+  }
+  main .allreels .reel .right h6 {
+    font-size: 2.5rem !important;
   }
 }
 @media (max-width: 350px) {
@@ -139,5 +170,10 @@ main section::-webkit-scrollbar {
   }
   .user h4 {
     font-size: 16px;
+  }
+  .right {
+    width: clamp(46px, 12vw, 60px);
+    right: 3%;
+    top: 48%;
   }
 }/*# sourceMappingURL=yt.css.map */

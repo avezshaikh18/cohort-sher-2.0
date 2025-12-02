@@ -157,7 +157,7 @@ reels.forEach(function (elem) {
 
 document.querySelector(".allreels").innerHTML = sum;
 
-// Adding event listeners for like, comment, share, and remix icons
+
 document.querySelectorAll(".like-icon").forEach((likeBtn, index) => {
   likeBtn.addEventListener("click", () => {
     reels[index].isLiked = !reels[index].isLiked;
@@ -185,3 +185,20 @@ document.querySelectorAll(".remix-icon").forEach((remixBtn, index) => {
     alert(`You remixed ${reels[index].username}'s reel!`);
   });
 });   
+document.querySelectorAll(".reel video").forEach((video) => {
+  video.addEventListener("click", () => {
+    if (video.paused) {   
+      video.play();
+    } else {
+      video.pause();
+    }   
+  }); 
+});
+document.querySelectorAll(".user button").forEach((followBtn, index) => {
+  followBtn.addEventListener("click", () => {
+    reels[index].isFollowed = !reels[index].isFollowed;
+    followBtn.textContent = reels[index].isFollowed ? "Following" : "Follow";
+  });   
+
+});
+  
