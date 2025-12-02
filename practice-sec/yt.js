@@ -202,3 +202,36 @@ document.querySelectorAll(".user button").forEach((followBtn, index) => {
 
 });
   
+document.querySelectorAll(".reel").forEach((reel) => {
+  reel.addEventListener("dblclick", () => {
+    const likeIcon = reel.querySelector(".like-icon");
+    likeIcon.click();
+  });   
+});
+document.querySelectorAll(".reel video").forEach((video) => {
+  video.addEventListener("ended", () => {
+    video.currentTime = 0;
+    video.play();
+  }); 
+});
+document.querySelectorAll(".reel").forEach((reel, index) => {
+  reel.addEventListener("mouseenter", () => {
+    const video = reel.querySelector("video");
+    video.muted = false;
+  }); 
+  reel.addEventListener("mouseleave", () => {
+    const video = reel.querySelector("video");
+    video.muted = true;
+  });
+});
+document.querySelectorAll(".reel video").forEach((video) => {
+  video.addEventListener("timeupdate", () => {
+    const duration = video.duration;  
+    const currentTime = video.currentTime;
+    if (duration - currentTime <= 3) {
+      video.style.filter = "brightness(0.7)";
+    } else {
+      video.style.filter = "brightness(1)";
+    }   
+  }); 
+}); 

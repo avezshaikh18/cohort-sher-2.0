@@ -51,11 +51,14 @@ main {
         position: relative;
         overflow: hidden;
         scroll-snap-align: start;
+        border-radius: 1rem;
 
         video {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            border-radius: 1rem;
+
         }
 
 
@@ -68,7 +71,8 @@ main {
             padding: 30px 20px;
             color: white;
             background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
-
+            border-radius: 1rem;
+            
             .user {
                 display: flex;
                 align-items: center;
@@ -88,9 +92,9 @@ main {
                 }
 
                 button {
-                    padding: 3px 6px;
+                    padding: 4px 8px;
                     background: transparent;
-                    border: 1px solid white;
+                    border: 2px solid white;
                     color: white;
                     border-radius: 5px;
                     cursor: pointer;
@@ -98,7 +102,7 @@ main {
 
                 button:active {
                     background: white;
-                    color: black;
+                    color: rgb(255, 255, 255);
                     scale: 0.95;
                 }
             }
@@ -113,7 +117,7 @@ main {
         .right {
             position: absolute;
             right: 0%;
-            top: 50%;
+            top: 52%;
             /* responsive width for the icon column */
             width: clamp(48px, 7vw, 80px);
             color: white;
@@ -150,33 +154,40 @@ main {
 
 
 
-@media (min-width: 900px) {
+@media (min-width: 1600px) {
 
     main {
         display: flex;
         justify-content: center;
         align-items: center;
+        .reel{
+            border-radius: 2rem;
+        }
     }
     main .allreels .reel .bottom {
         min-height: clamp(350px, 40vh, 450px);
-        padding: 1rem 2rem;
+        padding: 2rem 3rem;
+        gap: 1rem;
 
         .user img {
-            height: 80px;
-            width: 80px;
+            height: 100px;
+            width: 100px;
+            object-fit: cover  !important;
         }
         .user h4 {
-            font-size: 4rem !important;
+            font-size: 5rem !important;
         }
         .user button{
-            padding: 1rem 2rem;
+            padding: 1.5rem 2.5rem;
             font-size: 1.8rem!important;
             border-radius: 1rem;
             margin-left: 0.5rem;
+            background-color: transparent;
+            border: 2px solid white;
         }
 
         div h3 {
-            font-size: 2.5rem!important;
+            font-size: 3rem!important;
         }
     }
 
@@ -185,10 +196,11 @@ main {
         width: clamp(90px, 12vw, 130px) !important;
         gap: 3.5rem;
         top: 55%;
+        right: 1%;
     }
 
     main .allreels .reel .right .icon {
-        font-size: clamp(3rem, 8vw, 5.5rem);
+        font-size: clamp(5rem, 9vw, 7.5rem);
     }
 
 

@@ -46,12 +46,14 @@ main section::-webkit-scrollbar {
   position: relative;
   overflow: hidden;
   scroll-snap-align: start;
+  border-radius: 1rem;
 }
 .allreels .reel video {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: 1rem;
 }
 .allreels .reel .bottom {
   position: absolute;
@@ -62,6 +64,7 @@ main section::-webkit-scrollbar {
   padding: 30px 20px;
   color: white;
   background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+  border-radius: 1rem;
 }
 .allreels .reel .bottom .user {
   display: flex;
@@ -81,16 +84,16 @@ main section::-webkit-scrollbar {
   font-weight: 600;
 }
 .allreels .reel .bottom .user button {
-  padding: 3px 6px;
+  padding: 4px 8px;
   background: transparent;
-  border: 1px solid white;
+  border: 2px solid white;
   color: white;
   border-radius: 5px;
   cursor: pointer;
 }
 .allreels .reel .bottom .user button:active {
   background: white;
-  color: black;
+  color: rgb(255, 255, 255);
   scale: 0.95;
 }
 .allreels .reel .bottom h3 {
@@ -100,7 +103,7 @@ main section::-webkit-scrollbar {
 .allreels .reel .right {
   position: absolute;
   right: 0%;
-  top: 50%;
+  top: 52%;
   /* responsive width for the icon column */
   width: clamp(48px, 7vw, 80px);
   color: white;
@@ -126,39 +129,48 @@ main section::-webkit-scrollbar {
   gap: 5px;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 1600px) {
   main {
     display: flex;
     justify-content: center;
     align-items: center;
   }
+  main .reel {
+    border-radius: 2rem;
+  }
   main .allreels .reel .bottom {
     min-height: clamp(350px, 40vh, 450px);
-    padding: 1rem 2rem;
+    padding: 2rem 3rem;
+    gap: 1rem;
   }
   main .allreels .reel .bottom .user img {
-    height: 80px;
-    width: 80px;
+    height: 100px;
+    width: 100px;
+    -o-object-fit: cover !important;
+       object-fit: cover !important;
   }
   main .allreels .reel .bottom .user h4 {
-    font-size: 4rem !important;
+    font-size: 5rem !important;
   }
   main .allreels .reel .bottom .user button {
-    padding: 1rem 2rem;
+    padding: 1.5rem 2.5rem;
     font-size: 1.8rem !important;
     border-radius: 1rem;
     margin-left: 0.5rem;
+    background-color: transparent;
+    border: 2px solid white;
   }
   main .allreels .reel .bottom div h3 {
-    font-size: 2.5rem !important;
+    font-size: 3rem !important;
   }
   main .allreels .reel .right {
     width: clamp(90px, 12vw, 130px) !important;
     gap: 3.5rem;
     top: 55%;
+    right: 1%;
   }
   main .allreels .reel .right .icon {
-    font-size: clamp(3rem, 8vw, 5.5rem);
+    font-size: clamp(5rem, 9vw, 7.5rem);
   }
   main .allreels .reel .right h6 {
     font-size: 2.5rem !important;
