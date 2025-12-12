@@ -1,0 +1,32 @@
+*{
+    padding: 0;
+    margin: 0; 
+    box-sizing: border-box;
+}   
+html, body{
+    height: 100%;
+    width: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(in oklab, rgb(19, 157, 136),rgb(4, 26, 57),rgb(2, 17, 34));
+} 
+:root{
+    --x:100px;
+    --y:100px;  
+}  
+
+main{
+    height: 100%;
+    width: 100%;    
+    background-image: url("https://i.pinimg.com/736x/f3/59/78/f35978a14cf102402e3667a6dca71d7f.jpg");
+    background-size: cover;
+    .box{
+       
+        height: 100%;
+        width: 100%;    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: radial-gradient(150px at var(--x) var(--y), transparent,rgb(0, 0, 0));
+        cursor:none;
+    }
+}
