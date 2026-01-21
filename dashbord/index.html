@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Neo Productivity Dashboard</title>
+
+  <!-- PWA -->
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='90'%3E🚀%3C/text%3E%3C/svg%3E" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ===== THEME ===== */
+:root{
+  --bg:#0b0f1a;--card:#141a33;--line:rgba(255,255,255,.08);
+  --text:#e5e7ff;--muted:#9aa3c7;
+  --accent:#7c7cff;--accent2:#2dd4bf;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:'Space Grotesk',system-ui;
+  color:var(--text);
+  background:var(--bg);
+}
+.app{display:grid;grid-template-columns:260px 1fr;min-height:100vh}
+.sidebar{padding:20px;border-right:1px solid var(--line)}
+.brand{font-weight:700;font-size:18px;margin-bottom:20px}
+.nav a{display:block;color:var(--muted);padding:12px;border-radius:14px;text-decoration:none}
+.nav a:hover,.nav a.active{background:rgba(124,124,255,.15);color:#fff}
+.main{padding:22px}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.card{background:linear-gradient(180deg,#141a33,#10162e);border-radius:22px;padding:16px;border:1px solid var(--line)}
+
+input,textarea,button{
+  width:100%;padding:12px;border-radius:14px;border:none;
+  background:#0b1022;color:#fff;margin-top:6px;
+}
+button{
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  color:#020617;font-weight:600;cursor:pointer;
+}
+ul{list-style:none;padding:0}
+li{display:flex;justify-content:space-between;border-bottom:1px dashed var(--line);padding:6px}
+li span{cursor:pointer;color:#fb7185}
+
+.timer{text-align:center;font-size:32px}
+iframe{width:100%;border:none;border-radius:14px}
+
+/* Responsive */
+@media(max-width:768px){
+  .app{grid-template-columns:1fr}
+  .sidebar{border-right:none;border-bottom:1px solid var(--line);display:flex;gap:10px}
+  .nav{display:flex;gap:8px}
+}
+</style>
+</head>
+
+<body>
+<div class="app">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="brand">🚀 Neo Dashboard</div>
+    <nav class="nav">
+      <a class="active">Overview</a>
+      <a>Focus</a>
+      <a>Planner</a>
+      <a>Documentary</a>
+    </nav>
+  </aside>
+
+  <!-- Main -->
+  <main class="main">
+
+    <!-- Header -->
+    <div class="card" style="display:flex;justify-content:space-between;align-items:center;margin-bottom:18px">
+      <div>
+        <h2 id="today"></h2>
+        <p id="clock" style="color:var(--muted)"></p>
+      </div>
+      <button onclick="toggleFocus()">🎧 Focus Mode</button>
+    </div>
+
+    <section class="grid">
+
+      <!-- Goals -->
+      <div class="card">
+        <h3>🎯 Daily Goals</h3>
+        <input id="goalInput" placeholder="Add goal">
+        <button onclick="addItem('goals',goalInput,goalList)">Add</button>
+        <ul id="goalList"></ul>
+      </div>
+
+      <!-- Todo -->
+      <div class="card">
+        <h3>📝 Todo</h3>
+        <input id="todoInput" placeholder="Add task">
+        <button onclick="addItem('todos',todoInput,todoList)">Add</button>
+        <ul id="todoList"></ul>
+      </div>
+
+      <!-- Pomodoro -->
+      <div class="card">
+        <h3>⏱ Pomodoro</h3>
+        <div id="timer" class="timer">25:00</div>
+        <button onclick="startTimer()">Start</button>
+        <button onclick="resetTimer()">Reset</button>
+      </div>
+
+      <!-- Spotify -->
+      <div class="card">
+        <h3>🎵 Focus Music</h3>
+        <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DWZeKCadgRdKQ"
+          height="152" allow="encrypted-media"></iframe>
+      </div>
+
+      <!-- AI Suggestion -->
+      <div class="card">
+        <h3>🤖 AI Suggestion</h3>
+        <p id="aiAuto" style="color:var(--muted)"></p>
+      </div>
+
+      <!-- Planner -->
+      <div class="card">
+        <h3>📅 Day Planner</h3>
+        <textarea id="planner"></textarea>
+        <button onclick="savePlanner()">Save</button>
+        <button onclick="autoPlan()">Auto Plan</button>
+      </div>
+
+    </section>
+
+    <!-- Documentary -->
+    <section class="grid" style="margin-top:20px">
+      <div class="card" style="grid-column:1/-1">
+        <h3>🎬 Documentary – Successful People</h3>
+
+        <div style="display:flex;gap:20px;flex-wrap:wrap">
+          <div style="max-width:260px">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/Elon_Musk_Colorado_2022_%28cropped2%29.jpg"
+              style="width:100%;border-radius:14px">
+            <p style="color:var(--muted)">
+              Elon Musk is known for extreme focus, innovation and long-term vision.
+            </p>
+          </div>
+
+          <div style="max-width:260px">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Steve_Jobs_Headshot_2010-CROP.jpg"
+              style="width:100%;border-radius:14px">
+            <p style="color:var(--muted)">
+              Steve Jobs believed in simplicity and deep creative focus.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer style="margin-top:30px;color:var(--muted)">
+      Built with focus • PWA • AI-ready
+    </footer>
+
+  </main>
+</div>
+
+<script>
+/* Date */
+setInterval(()=>{
+  const d=new Date();
+  today.innerText=d.toDateString();
+  clock.innerText=d.toLocaleTimeString();
+},1000);
+
+/* Focus */
+function toggleFocus(){
+  document.body.style.filter=
+    document.body.style.filter ? '' : 'grayscale(1)';
+}
+
+/* Storage Lists */
+function addItem(key,input,list){
+  if(!input.value)return;
+  const d=JSON.parse(localStorage.getItem(key)||"[]");
+  d.push(input.value);
+  localStorage.setItem(key,JSON.stringify(d));
+  input.value='';
+  render(key,list);
+}
+function render(key,list){
+  list.innerHTML='';
+  (JSON.parse(localStorage.getItem(key)||"[]")).forEach((v,i)=>{
+    list.innerHTML+=`<li>${v}<span onclick="removeItem('${key}',${i})">✖</span></li>`;
+  });
+}
+function removeItem(key,i){
+  const d=JSON.parse(localStorage.getItem(key));
+  d.splice(i,1);
+  localStorage.setItem(key,JSON.stringify(d));
+  render(key,key==='goals'?goalList:todoList);
+}
+render('goals',goalList);render('todos',todoList);
+
+/* Pomodoro */
+let time=1500,int;
+function startTimer(){
+  if(int)return;
+  int=setInterval(()=>{
+    time--;timer.innerText=
+    `${String(time/60|0).padStart(2,'0')}:${String(time%60).padStart(2,'0')}`;
+    if(time<=0){clearInterval(int);int=null;alert("Done!");}
+  },1000);
+}
+function resetTimer(){clearInterval(int);int=null;time=1500;timer.innerText="25:00";}
+
+/* Planner */
+planner.value=localStorage.getItem('planner')||'';
+function savePlanner(){localStorage.setItem('planner',planner.value);}
+function autoPlan(){
+planner.value=`07:00 Wake up
+09:00 Deep work
+12:00 Break
+15:00 Coding
+20:00 Review`;
+savePlanner();
+}
+
+/* AI Auto Suggestion */
+function aiAutoSuggest(){
+  const h=new Date().getHours();
+  aiAuto.innerText =
+    h<10?"Best time for deep work 🚀":
+    h<17?"Finish important tasks ⚡":
+    "Plan tomorrow & relax 🌙";
+}
+aiAutoSuggest();
+
+/* PWA */
+if('serviceWorker' in navigator){
+  navigator.serviceWorker.register('service-worker.js');
+}
+</script>
+</body>
+</html>
